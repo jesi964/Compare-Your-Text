@@ -42,12 +42,45 @@ body {
   --bg-alt: #0f1114;
   --card: #0f1114;
   --surface: #14161a;
-  --text: #eef2f7; /* brighter body text for legibility */
-  --muted: #b9bfc9; /* readable muted text */
-  --border: rgba(255, 255, 255, 0.06);
-  --border-strong: rgba(255, 255, 255, 0.12);
+  --text: #f5efef; /* stronger body text for legibility */
+  --muted: #c6cbd6; /* readable muted text */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.18);
   --accent: #60a5fa;
   --accent-contrast: #071025;
+}
+
+/* Accessibility improvements: force higher contrast for key elements in dark mode */
+.app.dark .card {
+  background: #111316; /* slightly lighter than page bg for contrast */
+}
+.app.dark .hero {
+  background: #121418;
+}
+.app.dark .hero h1 {
+  color: var(--text);
+  font-weight: 800;
+  opacity: 1;
+}
+.app.dark .hero p,
+.app.dark .input-head h2,
+.app.dark .drop-zone-label,
+.app.dark .drop-zone-help,
+.app.dark .count-pill,
+.app.dark .list-item,
+.app.dark .summary-metrics span {
+  color: var(--text);
+  opacity: 1;
+}
+.app.dark textarea,
+.app.dark .dup-filter {
+  background: #0f1214;
+  color: var(--text);
+  border-color: rgba(255,255,255,0.06);
+}
+.app.dark textarea::placeholder,
+.app.dark .dup-filter::placeholder {
+  color: rgba(255,255,255,0.55);
 }
 
 .card {

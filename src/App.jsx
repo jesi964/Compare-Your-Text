@@ -37,7 +37,7 @@ export default function App() {
   const [textA, setTextA] = useState('');
   const [textB, setTextB] = useState('');
   const [mode, setMode] = useState('side');
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const [fuzzyThreshold, setFuzzyThreshold] = useState(72);
   const [mergeSimilar, setMergeSimilar] = useState(true);
   const [loading, setLoading] = useState(false);
@@ -204,9 +204,9 @@ export default function App() {
       <section className="exports card">
         <h2>Export</h2>
         <div className="btn-row">
-          <button className="btn" onClick={() => exportData('csv')} disabled={!result}>डाउनलोड CSV</button>
-          <button className="btn" onClick={() => exportData('json')} disabled={!result}>डाउनलोड JSON</button>
-          <button className="btn" onClick={() => exportData('txt')} disabled={!result}>डाउनलोड Text</button>
+          <button className="btn" onClick={() => exportData('csv')} disabled={!result}>Download CSV</button>
+          <button className="btn" onClick={() => exportData('json')} disabled={!result}>Download JSON</button>
+          <button className="btn" onClick={() => exportData('txt')} disabled={!result}>Download Text</button>
         </div>
       </section>
 
